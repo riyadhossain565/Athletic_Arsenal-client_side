@@ -10,7 +10,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300 py-8 mt-12">
+    <footer className="bg-gray-800 text-gray-300 py-8">
       <div className="w-11/12 mx-auto px-8 py-4">
         {/* Footer Content */}
         <div className="flex flex-wrap justify-between items-center">
