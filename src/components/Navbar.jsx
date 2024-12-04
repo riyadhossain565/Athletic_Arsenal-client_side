@@ -9,11 +9,17 @@ const Navbar = () => {
       <li>
         <NavLink to="/all-sports-equipment">All Sports Equipment</NavLink>
       </li>
+      <li>
+        <NavLink to="/all-sports-equipment">Add Equipment</NavLink>
+      </li>
+      <li>
+        <NavLink to="/all-sports-equipment">My Equipment List </NavLink>
+      </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar w-11/12 mx-auto px-8 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,13 +45,15 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <NavLink to="/" className="text-xl font-bold">
+          Athletic Arsenal
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn">Login</a>
       </div>
     </div>
   );
