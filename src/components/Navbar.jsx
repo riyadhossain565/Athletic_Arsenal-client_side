@@ -1,6 +1,33 @@
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, signOutUser } = useContext(AuthContext);
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    if (user) {
+      fetch(`http://localhost:5000/users/${user.email}`)
+        .then((res) => res.json())
+        .then((data) => setUserData(data))
+        .catch((error) => {
+          console.log("Error data:", error);
+          setUserData(null);
+        });
+    }
+  }, [user]);
+
+  const handleSignOut = () => {
+    signOutUser()
+      .then(() => {
+        console.log("User signed out successfully");
+      })
+      .catch((error) => {
+        console.log("ERROR:", error.message);
+      });
+  };
+
   const links = (
     <>
       <li>
@@ -53,7 +80,25 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Login</a>
+        {user ? (
+          <>
+            {userData && (
+              <img
+                className="w-10 h-10 rounded-full mr-2"
+                title={userData.name}
+                src={userData.image}
+                alt="User Profile"
+              />
+            )}
+            <button onClick={handleSignOut} className="btn">
+              Sign Out
+            </button>
+          </>
+        ) : (
+          <NavLink to="/signin" className="btn">
+            SignIn
+          </NavLink>
+        )}
       </div>
     </div>
   );
