@@ -50,6 +50,7 @@ const AddEquipment = () => {
     };
 
     console.log(newEquipment);
+    event.target.reset();
 
     // send data to the server
     fetch("http://localhost:5000/equipment", {
