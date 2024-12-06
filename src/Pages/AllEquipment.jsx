@@ -1,6 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
-import { MdDelete } from "react-icons/md";
+import { Link, useLoaderData } from "react-router-dom";
 
 const AllEquipment = () => {
   const items = useLoaderData();
@@ -38,12 +37,12 @@ const AllEquipment = () => {
                 <td>{item.category}</td>
                 <td>{item.price}$</td>
                 <td>
-                  <button
-                    onClick={() => handleUserDelete(user._id)}
+                  <Link
+                    to={`/view-details/${item._id}`}
                     className="btn rounded-lg text-white bg-[#EA4744]"
                   >
                     View Details
-                  </button>
+                  </Link>
                 </td>
               </tr>
             ))}
