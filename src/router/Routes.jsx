@@ -7,6 +7,7 @@ import Register from "../Pages/Register";
 import AllEquipment from "../Pages/AllEquipment";
 import ViewDetails from "../Pages/ViewDetails";
 import MyEquipment from "../Pages/MyEquipment";
+import UpdateDetails from "../Pages/UpdateDetails";
 
 const Routes = createBrowserRouter([
   {
@@ -30,6 +31,12 @@ const Routes = createBrowserRouter([
       {
         path: "/view-details/:id",
         element: <ViewDetails />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/equipment/${params.id}`),
+      },
+      {
+        path: "/my-equipment/update-details/:id",
+        element: <UpdateDetails />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/equipment/${params.id}`),
       },

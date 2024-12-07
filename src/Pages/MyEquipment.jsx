@@ -21,8 +21,10 @@ const MyEquipment = () => {
     }
   }, [user]);
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-8">
-      <h1 className="text-2xl font-bold text-gray-800 mb-6">My Equipment</h1>
+    <div className="w-5/6 mx-auto my-12">
+      <h1 className="text-2xl font-bold text-gray-800 mb-6 text-center mb-6">
+        My Equipment
+      </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-6">
         {items.map((item) => (

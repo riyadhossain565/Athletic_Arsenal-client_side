@@ -14,12 +14,6 @@ const ViewDetails = () => {
     description,
   } = loadedItem;
   return (
-    // <div className="w-3/5 mx-auto">
-    //     <Link to="/" className="rancho-font text-xl flex items-center gap-4">
-    //       <FaArrowLeftLong />
-    //       <span className="font-bold text-[#374151]"> Back to home</span>
-    //     </Link>
-    //   </div>
     <div className="w-3/5 mx-auto bg-[#F4F3F0] flex gap-12 items-center px-14 py-10 my-8">
       <figure>
         <img src={image} alt="coffee_img" />
