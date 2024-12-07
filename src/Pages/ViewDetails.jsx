@@ -31,6 +31,7 @@ const ViewDetails = () => {
         <p>
           <strong>Item-Name : </strong>
           {itemName}
+          {/* <div className="badge badge-secondary">{stockStatus}</div> */}
         </p>
         <p>
           <strong>Category : </strong>

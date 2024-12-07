@@ -6,6 +6,7 @@ import SignIn from "../Pages/SignIn";
 import Register from "../Pages/Register";
 import AllEquipment from "../Pages/AllEquipment";
 import ViewDetails from "../Pages/ViewDetails";
+import MyEquipment from "../Pages/MyEquipment";
 
 const Routes = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const Routes = createBrowserRouter([
         element: <ViewDetails />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/equipment/${params.id}`),
+      },
+      {
+        path: "/my-equipment",
+        element: <MyEquipment />,
       },
       {
         path: "/signin",
