@@ -1,8 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const Equipment = ({ item }) => {
+const Equipment = ({ item, items, setItems }) => {
   const { _id, itemName, image, category, price } = item;
+
+  const handleDelete = (id) => {
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/equipment/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+
+              // updated remaining item
+              const remainingItems = items.filter((item) => item._id !== id);
+              setItems(remainingItems);
+            }
+          });
+      }
+    });
+  };
   return (
     <div>
       <div className="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
@@ -23,7 +57,10 @@ const Equipment = ({ item }) => {
           >
             Update
           </Link>
-          <button className="btn rounded-lg w-full bg-[#eb593f] text-xl text-white">
+          <button
+            onClick={() => handleDelete(_id)}
+            className="btn rounded-lg w-full bg-[#eb593f] text-xl text-white"
+          >
             Delete
           </button>
         </div>
