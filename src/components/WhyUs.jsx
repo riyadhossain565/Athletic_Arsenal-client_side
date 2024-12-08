@@ -20,7 +20,7 @@ const WhyUs = () => {
       {/* Features Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Reliability */}
-        <div className="text-center p-6 bg-[#f8f9fa] rounded-lg shadow-lg">
+        <div className="text-center p-6 bg-[#343a40] rounded-lg shadow-lg">
           <img
             src={reliabilityIcon}
             alt="Reliability Icon"
@@ -36,7 +36,7 @@ const WhyUs = () => {
         </div>
 
         {/* Quality Products */}
-        <div className="text-center p-6 bg-[#f8f9fa] rounded-lg shadow-lg">
+        <div className="text-center p-6 bg-[#343a40] rounded-lg shadow-lg">
           <img
             src={qualityIcon}
             alt="Quality Icon"
@@ -52,7 +52,7 @@ const WhyUs = () => {
         </div>
 
         {/* Support */}
-        <div className="text-center p-6 bg-[#f8f9fa] rounded-lg shadow-lg">
+        <div className="text-center p-6 bg-[#343a40] rounded-lg shadow-lg">
           <img
             src={supportIcon}
             alt="Support Icon"

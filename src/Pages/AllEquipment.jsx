@@ -42,11 +42,11 @@ const AllEquipment = () => {
           </p>
         </Fade>
       </div>
-      <div className="ml-16 mb-12 overflow-x-auto">
+      <div className="lg:ml-16 mb-12 overflow-x-auto">
         <div className="flex justify-end">
           <button
             onClick={handleSort}
-            className="btn bg-[#007bff] hover:bg-[#0056b3]"
+            className="btn bg-[#007bff] hover:bg-[#0056b3] mb-2"
           >
             Sort By Price
           </button>

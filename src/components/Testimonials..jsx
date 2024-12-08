@@ -14,10 +14,10 @@ const Testimonials = () => {
       </p>
 
       {/* Testimonial Carousel */}
-      <div className="mt-12 flex justify-center overflow-x-scroll gap-8 scrollbar-hide">
+      <div className="mt-12 flex md:flex-row flex-col justify-center gap-8">
         {/* first */}
         <div
-          className="w-80 bg-[#f8f9fa] dark:bg-[#343a40] p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow"
+          className="w-80 bg-[#343a40]  p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow"
         >
           <img
             src={photo1}
@@ -27,17 +27,17 @@ const Testimonials = () => {
           <h3 className="text-2xl font-semibold text-[#17a2b8] mt-4">
           Alex Johnson
           </h3>
-          <p className="italic text-[#6c757d] dark:text-[#adb5bd] mt-2">
+          <p className="italic text-[#6c757d] mt-2">
           The quality of equipment I found here is unmatched! It has truly elevated my game.
           </p>
-          <p className="text-sm text-[#6c757d] dark:text-[#adb5bd] mt-2">
+          <p className="text-sm text-[#6c757d] mt-2">
           California, USA
           </p>
         </div>
 
         {/* second */}
         <div
-          className="flex-shrink-0 w-80 bg-[#f8f9fa] dark:bg-[#343a40] p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow"
+          className="flex-shrink-0 w-80 bg-[#343a40] p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow"
         >
           <img
             src={photo2}
@@ -47,15 +47,16 @@ const Testimonials = () => {
           <h3 className="text-2xl font-semibold text-[#17a2b8] mt-4">
           Maria Rodriguez
           </h3>
-          <p className="italic text-[#6c757d] dark:text-[#adb5bd] mt-2">
+          <p className="italic text-[#6c757d]  mt-2">
           I love the variety of options available. The customer service is fantastic!
           </p>
-          <p className="text-sm text-[#6c757d] dark:text-[#adb5bd] mt-2">
+          <p className="text-sm text-[#6c757d]  mt-2">
           Madrid, Spain
           </p>
         </div>
+        {/* third */}
         <div
-          className="flex-shrink-0 w-80 bg-[#f8f9fa] dark:bg-[#343a40] p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow"
+          className="flex-shrink-0 w-80 bg-[#343a40] p-6 shadow-lg rounded-lg hover:shadow-xl transition-shadow"
         >
           <img
             src={photo3}
@@ -65,10 +66,10 @@ const Testimonials = () => {
           <h3 className="text-2xl font-semibold text-[#17a2b8] mt-4">
           Kenichi Yamada
           </h3>
-          <p className="italic text-[#6c757d] dark:text-[#adb5bd] mt-2">
+          <p className="italic text-[#6c757d]  mt-2">
           Athletic Arsenal is my go-to store for all my sports needs. Highly recommended!
           </p>
-          <p className="text-sm text-[#6c757d] dark:text-[#adb5bd] mt-2">
+          <p className="text-sm text-[#6c757d] mt-2">
           Tokyo, Japan
           </p>
         </div>
