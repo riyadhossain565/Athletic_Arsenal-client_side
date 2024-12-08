@@ -19,22 +19,22 @@ const Categories = () => {
       </div>
       <div className="flex justify-center gap-4 mt-8">
         <Fade direction="up">
-          <button className="px-8 py-3 font-bold border border-[#ff5209] text-black hover:bg-[#ff5209] hover:text-white hover:boreder-[#ff5209]">
+          <button className="px-8 py-3 font-bold border border-[#007bff] text-[#17a2b8] hover:bg-[#0056b3] hover:text-white hover:boreder-[#007bff]">
             Cricket
           </button>
-          <button className="px-8 py-3 font-bold border border-[#ff5209] text-black hover:bg-[#ff5209] hover:text-white hover:boreder-[#ff5209]">
+          <button className="px-8 py-3 font-bold border border-[#007bff] text-[#17a2b8] hover:bg-[#0056b3] hover:text-white hover:boreder-[#007bff]">
             Football
           </button>
-          <button className="px-8 py-3 font-bold border border-[#ff5209] text-black hover:bg-[#ff5209] hover:text-white hover:boreder-[#ff5209]">
+          <button className="px-8 py-3 font-bold border border-[#007bff] text-[#17a2b8] hover:bg-[#0056b3] hover:text-white hover:boreder-[#007bff]">
             Basketball
           </button>
-          <button className="px-8 py-3 font-bold border border-[#ff5209] text-black hover:bg-[#ff5209] hover:text-white hover:boreder-[#ff5209]">
+          <button className="px-8 py-3 font-bold border border-[#007bff] text-[#17a2b8] hover:bg-[#0056b3] hover:text-white hover:boreder-[#007bff]">
             Fitness
           </button>
-          <button className="px-8 py-3 font-bold border border-[#ff5209] text-black hover:bg-[#ff5209] hover:text-white hover:boreder-[#ff5209]">
+          <button className="px-8 py-3 font-bold border border-[#007bff] text-[#17a2b8] hover:bg-[#0056b3] hover:text-white hover:boreder-[#007bff]">
             Golf
           </button>
-          <button className="px-8 py-3 font-bold border border-[#ff5209] text-black hover:bg-[#ff5209] hover:text-white hover:boreder-[#ff5209]">
+          <button className="px-8 py-3 font-bold border border-[#007bff] text-[#17a2b8] hover:bg-[#0056b3] hover:text-white hover:boreder-[#007bff]">
             Cycling
           </button>
         </Fade>

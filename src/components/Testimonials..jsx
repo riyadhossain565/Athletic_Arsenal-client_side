@@ -22,9 +22,9 @@ const Testimonials = () => {
           <img
             src={photo1}
             alt="testimonial photo"
-            className="w-20 h-20 rounded-full mx-auto border-4 border-[#007bff] dark:border-[#17a2b8]"
+            className="w-20 h-20 rounded-full mx-auto border-4 border-[#17a2b8]"
           />
-          <h3 className="text-2xl font-semibold text-[#007bff] dark:text-[#17a2b8] mt-4">
+          <h3 className="text-2xl font-semibold text-[#17a2b8] mt-4">
           Alex Johnson
           </h3>
           <p className="italic text-[#6c757d] dark:text-[#adb5bd] mt-2">
@@ -42,9 +42,9 @@ const Testimonials = () => {
           <img
             src={photo2}
             alt="testimonial photo"
-            className="w-20 h-20 rounded-full mx-auto border-4 border-[#007bff] dark:border-[#17a2b8]"
+            className="w-20 h-20 rounded-full mx-auto border-4 border-[#17a2b8]"
           />
-          <h3 className="text-2xl font-semibold text-[#007bff] dark:text-[#17a2b8] mt-4">
+          <h3 className="text-2xl font-semibold text-[#17a2b8] mt-4">
           Maria Rodriguez
           </h3>
           <p className="italic text-[#6c757d] dark:text-[#adb5bd] mt-2">
@@ -60,9 +60,9 @@ const Testimonials = () => {
           <img
             src={photo3}
             alt="testimonial photo"
-            className="w-20 h-20 rounded-full mx-auto border-4 border-[#007bff] dark:border-[#17a2b8]"
+            className="w-20 h-20 rounded-full mx-auto border-4 border-[#17a2b8]"
           />
-          <h3 className="text-2xl font-semibold text-[#007bff] dark:text-[#17a2b8] mt-4">
+          <h3 className="text-2xl font-semibold text-[#17a2b8] mt-4">
           Kenichi Yamada
           </h3>
           <p className="italic text-[#6c757d] dark:text-[#adb5bd] mt-2">
@@ -76,10 +76,10 @@ const Testimonials = () => {
 
       {/* Navigation Buttons */}
       <div className="mt-6 flex justify-center space-x-4">
-        <button className="px-4 py-2 bg-[#007bff] text-white rounded-md hover:bg-[#0056b3] dark:bg-[#17a2b8] dark:hover:bg-[#0d6efd]">
+        <button className="px-4 py-2 bg-[#007bff] text-white rounded-md hover:bg-[#0056b3] ">
           Previous
         </button>
-        <button className="px-4 py-2 bg-[#007bff] text-white rounded-md hover:bg-[#0056b3] dark:bg-[#17a2b8] dark:hover:bg-[#0d6efd]">
+        <button className="px-4 py-2 bg-[#007bff] text-white rounded-md hover:bg-[#0056b3]">
           Next
         </button>
       </div>

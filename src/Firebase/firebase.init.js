@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAp6q1wiNZTgsVJnuAr0pAwMLFrNOA0l5Y",
-  authDomain: "athletic-arsenal.firebaseapp.com",
-  projectId: "athletic-arsenal",
-  storageBucket: "athletic-arsenal.firebasestorage.app",
-  messagingSenderId: "440187901522",
-  appId: "1:440187901522:web:69b12f87df608563fdf18b"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

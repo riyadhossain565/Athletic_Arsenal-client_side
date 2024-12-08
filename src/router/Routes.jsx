@@ -20,7 +20,7 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/equipment"),
+        loader: () => fetch("http://localhost:5000/equipment/home"),
       },
       {
         path: "/all-equipment",

@@ -75,11 +75,14 @@ const AddEquipment = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12">
-      <div className="bg-white w-full max-w-4xl p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8 caveat-font">
+    <div className="min-h-screen flex items-center justify-center py-12">
+      <div className="w-full max-w-4xl p-8 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-semibold text-center mb-6 caveat-font">
           Add New Equipment
         </h2>
+        <p className="text-center mb-8 lg:mx-14">
+        Fill in essential details like name, category, price, and description to expand the catalog. Whether you're adding for personal use or sharing with others, this feature ensures that all equipment is well-documented and organized.
+        </p>
 
         <form className="space-y-6" onSubmit={handleAddItems}>
           {/* row-1 */}
@@ -276,7 +279,7 @@ const AddEquipment = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-[#e74c3c] text-white hover:border-[#c0392b] hover:bg-[#c0392b] hover:text-[#ecf0f1] py-3 rounded-lg font-semibold focus:outline-none transition-all"
+              className="w-full bg-[#007bff] text-white hover:border-[#007bff] hover:bg-[#0056b3] hover:text-[#ecf0f1] py-3 rounded-lg font-semibold focus:outline-none transition-all"
             >
               Add Item
             </button>

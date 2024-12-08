@@ -8,7 +8,7 @@ const WhyUs = () => {
     <div className="w-5/6 mx-auto my-16">
       {/* Section Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-black caveat-font ">
+        <h2 className="text-4xl font-bold caveat-font ">
           Why Choose Athletic Arsenal?
         </h2>
         <p className="mt-4 text-lg text-black ">

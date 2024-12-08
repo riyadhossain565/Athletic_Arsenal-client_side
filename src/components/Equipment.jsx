@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Equipment = ({ item, items, setItems }) => {
-  const { _id, itemName, image, category, price } = item;
+  const { _id, itemName, image, category, price, rating } = item;
 
   const handleDelete = (id) => {
     console.log(id);
@@ -39,18 +39,19 @@ const Equipment = ({ item, items, setItems }) => {
   };
   return (
     <div>
-      <div className="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+      <div className="p-4 border rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-200">
         <img
           src={image}
           alt={itemName}
-          className="h-40 w-full object-cover rounded-t-lg"
+          className="h-40 w-full object-cover rounded-lg border-2 border-[#17a2b8]"
         />
         <div className="p-4">
-          <h2 className="text-lg font-semibold text-gray-700">{itemName}</h2>
-          <p className="text-sm text-gray-500">Category: {category}</p>
-          <p className="text-sm text-gray-500">Price: ${price}</p>
+          <h2 className="text-lg font-semibold">{itemName}</h2>
+          <p><strong>Category : </strong> {category}</p>
+          <p><strong>Rating : </strong> {rating} </p>
+          <p><strong>Price : </strong>${price}</p>
         </div>
-        <div className="grid grid-cols-2 gap-4 mt-4">
+        <div className="grid grid-cols-2 gap-4 mt-2">
           <Link
             to={`update-details/${_id}`}
             className="btn rounded-lg w-full bg-[#4cb666] text-xl text-white"
