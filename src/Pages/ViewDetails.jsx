@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
   const loadedItem = useLoaderData();
@@ -14,44 +14,63 @@ const ViewDetails = () => {
     description,
   } = loadedItem;
   return (
-    <div className="w-3/5 mx-auto bg-[#F4F3F0] flex gap-12 items-center px-14 py-10 my-8">
-      <figure>
-        <img src={image} alt="coffee_img" />
-      </figure>
-      <div>
-        {/* <h3 className="text-2xl font-bold rancho-font text-[#331A15] my-4">
-            Niceties
-          </h3> */}
-        <p>
-          <strong>Item-Name : </strong>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12">
+      <div className="bg-white w-full max-w-4xl p-8 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-6">
           {itemName}
-          {/* <div className="badge badge-secondary">{stockStatus}</div> */}
-        </p>
-        <p>
-          <strong>Category : </strong>
-          {category}
-        </p>
-        <p>
-          <strong>Price : </strong>
-          {price}
-        </p>
-        <p>
-          <strong>Rating : </strong>
-          {rating}
-        </p>
-        <p>
-          <strong>customization : </strong>
-          {customization}
-        </p>
+        </h2>
 
-        <p>
-          <strong>processingTime : </strong>
-          {processingTime}
-        </p>
-        <p>
-          <strong>description : </strong>
-          {description}
-        </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Image */}
+          <div className="flex items-center justify-center">
+            <img
+              src={image}
+              alt={itemName}
+              className="h-64 w-full object-cover rounded-lg shadow-md"
+            />
+          </div>
+
+          {/* Details */}
+          <div className="space-y-4">
+            <p className="text-lg text-gray-700">
+              <span className="font-semibold">Category : </span> {category}
+            </p>
+            <p className="text-lg text-gray-700">
+              <span className="font-semibold">Price : </span> ${price}
+            </p>
+            <p className="text-lg text-gray-700">
+              <span className="font-semibold">Rating : </span> {rating} ⭐
+            </p>
+            <p className="text-lg text-gray-700">
+              <span className="font-semibold">Customization : </span>
+              {customization}
+            </p>
+            <p className="text-lg text-gray-700">
+              <span className="font-semibold">Processing Time : </span>
+              {processingTime}
+            </p>
+            <p className="text-lg text-gray-700">
+              <span className="font-semibold">Stock Status : </span>
+              {stockStatus}
+            </p>
+          </div>
+        </div>
+
+        {/* Description */}
+        <div className="mt-6">
+          <h3 className="text-xl font-semibold text-gray-800">Description : </h3>
+          <p className="text-gray-600 mt-2">{description}</p>
+        </div>
+
+        {/* Back Button */}
+        <div className="mt-8 text-center">
+          <Link
+            to="/"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold"
+          >
+            Back to List
+          </Link>
+        </div>
       </div>
     </div>
   );

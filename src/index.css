@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Wark sans */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rancho&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Caveat Font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 body {
   font-family: "Work Sans", sans-serif;
+  
+}
+
+.caveat-font {
+  font-family: "Caveat", cursive;
 }

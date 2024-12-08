@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import logo from "../assets/logo/logo-1.png"
 
 const Footer = () => {
   return (
@@ -16,7 +17,8 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between items-center">
           {/* Website Name */}
           <div className="mb-4 md:mb-0">
-            <h1 className="text-2xl font-bold text-white">Athletic Arsenal</h1>
+            <img className="w-20 bg-gray-800" src={logo} alt="Logo Image" />
+            <h1 className="text-2xl font-bold text-white caveat-font">Athletic Arsenal</h1>
             <p className="text-sm mt-1">
               Your ultimate destination for sports equipment.
             </p>

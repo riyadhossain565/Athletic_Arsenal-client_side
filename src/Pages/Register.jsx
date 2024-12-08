@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -8,6 +8,7 @@ const Register = () => {
   const { createUser, signInWithGoogle } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [errorPassword, setErrorPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -53,6 +54,7 @@ const Register = () => {
           .then((data) => {
             console.log("user created to DB", data);
             if (data.insertedId) {
+              navigate('/')
               Swal.fire({
                 icon: "success",
                 title: "Congratulation",
@@ -103,7 +105,7 @@ const Register = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 pb-12">
       <div className="w-full max-w-md p-8 bg-white rounded shadow-md my-8">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6 caveat-font">
           Register Now!
         </h2>
         <form onSubmit={handleRegister}>

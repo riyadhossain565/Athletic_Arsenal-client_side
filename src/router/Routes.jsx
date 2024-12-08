@@ -8,11 +8,14 @@ import AllEquipment from "../Pages/AllEquipment";
 import ViewDetails from "../Pages/ViewDetails";
 import MyEquipment from "../Pages/MyEquipment";
 import UpdateDetails from "../Pages/UpdateDetails";
+import ErrorPage from "../Pages/ErrorPage";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const Routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -26,23 +29,39 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/add-equipment",
-        element: <AddEquipment />,
+        element: (
+          <PrivateRoute>
+            <AddEquipment />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/view-details/:id",
-        element: <ViewDetails />,
+        element: (
+          <PrivateRoute>
+            <ViewDetails />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/equipment/${params.id}`),
       },
       {
         path: "/my-equipment/update-details/:id",
-        element: <UpdateDetails />,
+        element: (
+          <PrivateRoute>
+            <UpdateDetails />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/equipment/${params.id}`),
       },
       {
         path: "/my-equipment",
-        element: <MyEquipment />,
+        element: (
+          <PrivateRoute>
+            <MyEquipment />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/signin",
