@@ -20,12 +20,14 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/equipment/home"),
+        loader: () =>
+          fetch("https://athletic-arsenal-server.vercel.app/equipment/home"),
       },
       {
         path: "/all-equipment",
         element: <AllEquipment />,
-        loader: () => fetch("http://localhost:5000/equipment"),
+        loader: () =>
+          fetch("https://athletic-arsenal-server.vercel.app/equipment"),
       },
       {
         path: "/add-equipment",
@@ -43,7 +45,9 @@ const Routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/equipment/${params.id}`),
+          fetch(
+            `https://athletic-arsenal-server.vercel.app/equipment/${params.id}`
+          ),
       },
       {
         path: "/my-equipment/update-details/:id",
@@ -53,7 +57,9 @@ const Routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/equipment/${params.id}`),
+          fetch(
+            `https://athletic-arsenal-server.vercel.app/equipment/${params.id}`
+          ),
       },
       {
         path: "/my-equipment",

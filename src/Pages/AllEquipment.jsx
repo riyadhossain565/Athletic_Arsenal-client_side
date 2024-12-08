@@ -3,22 +3,23 @@ import { Link, useLoaderData } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 
 const AllEquipment = () => {
-  const initialItems  = useLoaderData();
+  const initialItems = useLoaderData();
   const [items, setItems] = useState([initialItems]);
-  const [sortOrder, setSortOrder] = useState(1); 
+  const [sortOrder, setSortOrder] = useState(1);
 
   // fetch data
   useEffect(() => {
-    fetch(`http://localhost:5000/equipment?sortOrder=${sortOrder}`)
+    fetch(
+      `https://athletic-arsenal-server.vercel.app/equipment?sortOrder=${sortOrder}`
+    )
       .then((res) => res.json())
-      .then((data) => {      
-        setItems(data)
+      .then((data) => {
+        setItems(data);
       })
       .catch((error) => {
         console.error("Error fetching sorted data:", error);
       });
-  }, [sortOrder]); 
-
+  }, [sortOrder]);
 
   const handleSort = () => {
     setSortOrder((prev) => (prev === 1 ? -1 : 1));

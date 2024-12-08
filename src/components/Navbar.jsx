@@ -27,7 +27,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`https://athletic-arsenal-server.vercel.app/users/${user.email}`)
         .then((res) => res.json())
         .then((data) => setUserData(data))
         .catch((error) => {

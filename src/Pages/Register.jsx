@@ -43,7 +43,7 @@ const Register = () => {
         const newUser = { name, email, image };
 
         // save new user info to the database
-        fetch("http://localhost:5000/users/", {
+        fetch("https://athletic-arsenal-server.vercel.app/users/", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -54,7 +54,7 @@ const Register = () => {
           .then((data) => {
             console.log("user created to DB", data);
             if (data.insertedId) {
-              navigate('/')
+              navigate("/");
               Swal.fire({
                 icon: "success",
                 title: "Congratulation",
@@ -75,7 +75,7 @@ const Register = () => {
         const { displayName, email, photoURL } = result.user;
         const newUser = { name: displayName, email, image: photoURL };
         // save new user info to the database
-        fetch("http://localhost:5000/users/", {
+        fetch("https://athletic-arsenal-server.vercel.app/users/", {
           method: "POST",
           headers: {
             "content-type": "application/json",

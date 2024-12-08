@@ -23,7 +23,7 @@ const UpdateDetails = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`https://athletic-arsenal-server.vercel.app/users/${user.email}`)
         .then((res) => res.json())
         .then((data) => setUserData(data))
         .catch((error) => {
@@ -67,7 +67,7 @@ const UpdateDetails = () => {
     console.log(updateEquipment);
 
     // send data to the server
-    fetch(`http://localhost:5000/equipment/${_id}`, {
+    fetch(`https://athletic-arsenal-server.vercel.app/equipment/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

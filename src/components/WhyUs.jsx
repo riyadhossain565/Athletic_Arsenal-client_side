@@ -11,7 +11,7 @@ const WhyUs = () => {
         <h2 className="text-4xl font-bold caveat-font ">
           Why Choose Athletic Arsenal?
         </h2>
-        <p className="mt-4 text-lg text-black ">
+        <p className="mt-4 text-lg">
           Your ultimate destination for premium sports equipment and
           unparalleled customer service.
         </p>
@@ -20,48 +20,48 @@ const WhyUs = () => {
       {/* Features Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Reliability */}
-        <div className="text-center p-6 bg-[#f8f9fa] dark:bg-[#343a40] rounded-lg shadow-lg">
+        <div className="text-center p-6 bg-[#f8f9fa] rounded-lg shadow-lg">
           <img
             src={reliabilityIcon}
             alt="Reliability Icon"
             className="mx-auto mb-4 w-16"
           />
-          <h3 className="text-2xl font-semibold text-[#007bff] dark:text-[#17a2b8]">
+          <h3 className="text-2xl font-semibold text-[#007bff]">
             Reliable Service
           </h3>
-          <p className="mt-4 text-[#6c757d] dark:text-[#adb5bd]">
+          <p className="mt-4 text-[#6c757d]">
             Experience seamless shopping with a commitment to timely delivery
             and dependable support.
           </p>
         </div>
 
         {/* Quality Products */}
-        <div className="text-center p-6 bg-[#f8f9fa] dark:bg-[#343a40] rounded-lg shadow-lg">
+        <div className="text-center p-6 bg-[#f8f9fa] rounded-lg shadow-lg">
           <img
             src={qualityIcon}
             alt="Quality Icon"
             className="mx-auto mb-4 w-16"
           />
-          <h3 className="text-2xl font-semibold text-[#007bff] dark:text-[#17a2b8]">
+          <h3 className="text-2xl font-semibold text-[#007bff] ">
             Premium Quality
           </h3>
-          <p className="mt-4 text-[#6c757d] dark:text-[#adb5bd]">
+          <p className="mt-4 text-[#6c757d] ">
             All equipment is crafted with precision, ensuring top-notch
             durability and performance.
           </p>
         </div>
 
         {/* Support */}
-        <div className="text-center p-6 bg-[#f8f9fa] dark:bg-[#343a40] rounded-lg shadow-lg">
+        <div className="text-center p-6 bg-[#f8f9fa] rounded-lg shadow-lg">
           <img
             src={supportIcon}
             alt="Support Icon"
             className="mx-auto mb-4 w-16"
           />
-          <h3 className="text-2xl font-semibold text-[#007bff] dark:text-[#17a2b8]">
+          <h3 className="text-2xl font-semibold text-[#007bff]">
             24/7 Support
           </h3>
-          <p className="mt-4 text-[#6c757d] dark:text-[#adb5bd]">
+          <p className="mt-4 text-[#6c757d]">
             Our dedicated team is always ready to assist you with your needs
             around the clock.
           </p>

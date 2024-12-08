@@ -8,7 +8,7 @@ const AddEquipment = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`https://athletic-arsenal-server.vercel.app/users/${user.email}`)
         .then((res) => res.json())
         .then((data) => setUserData(data))
         .catch((error) => {
@@ -53,7 +53,7 @@ const AddEquipment = () => {
     event.target.reset();
 
     // send data to the server
-    fetch("http://localhost:5000/equipment", {
+    fetch("https://athletic-arsenal-server.vercel.app/equipment", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -81,7 +81,10 @@ const AddEquipment = () => {
           Add New Equipment
         </h2>
         <p className="text-center mb-8 lg:mx-14">
-        Fill in essential details like name, category, price, and description to expand the catalog. Whether you're adding for personal use or sharing with others, this feature ensures that all equipment is well-documented and organized.
+          Fill in essential details like name, category, price, and description
+          to expand the catalog. Whether you're adding for personal use or
+          sharing with others, this feature ensures that all equipment is
+          well-documented and organized.
         </p>
 
         <form className="space-y-6" onSubmit={handleAddItems}>

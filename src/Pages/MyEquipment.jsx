@@ -8,7 +8,9 @@ const MyEquipment = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/equipment/email/${user.email}`)
+      fetch(
+        `https://athletic-arsenal-server.vercel.app/equipment/email/${user.email}`
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
@@ -26,7 +28,8 @@ const MyEquipment = () => {
         My Equipment
       </h1>
       <p className="text-center mb-8">
-      Manage your collection effortlessly by checking item details, editing existing entries, <br /> or removing items no longer needed.
+        Manage your collection effortlessly by checking item details, editing
+        existing entries, <br /> or removing items no longer needed.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-6">

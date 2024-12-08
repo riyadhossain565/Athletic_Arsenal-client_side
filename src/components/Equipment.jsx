@@ -17,7 +17,7 @@ const Equipment = ({ item, items, setItems }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/equipment/${id}`, {
+        fetch(`https://athletic-arsenal-server.vercel.app/equipment/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -47,9 +47,15 @@ const Equipment = ({ item, items, setItems }) => {
         />
         <div className="p-4">
           <h2 className="text-lg font-semibold">{itemName}</h2>
-          <p><strong>Category : </strong> {category}</p>
-          <p><strong>Rating : </strong> {rating} </p>
-          <p><strong>Price : </strong>${price}</p>
+          <p>
+            <strong>Category : </strong> {category}
+          </p>
+          <p>
+            <strong>Rating : </strong> {rating}{" "}
+          </p>
+          <p>
+            <strong>Price : </strong>${price}
+          </p>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-2">
           <Link
