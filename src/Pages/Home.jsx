@@ -3,6 +3,7 @@ import Slider from "../components/Slider";
 import Products from "../components/Products";
 import Categories from "../components/Categories";
 import WhyUs from "../components/WhyUs";
+import Testimonials from "../components/Testimonials.";
 
 const Home = () => {
   const loadedEquipment = useLoaderData();
@@ -12,6 +13,7 @@ const Home = () => {
       <Categories></Categories>
       <Products loadedEquipment={loadedEquipment}></Products>
       <WhyUs></WhyUs>
+      <Testimonials></Testimonials>
     </div>
   );
 };

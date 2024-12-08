@@ -5,7 +5,7 @@ import supportIcon from "../assets/icons/icons8-support-100.png";
 
 const WhyUs = () => {
   return (
-    <div className="w-11/12 mx-auto my-16">
+    <div className="w-5/6 mx-auto my-16">
       {/* Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-black caveat-font ">
