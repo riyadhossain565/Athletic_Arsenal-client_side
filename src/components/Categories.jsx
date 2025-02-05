@@ -17,7 +17,7 @@ const Categories = () => {
           </p>
         </Fade>
       </div>
-      <div className="flex justify-center gap-4 mt-8">
+      <div className="flex md:flex-row flex-col justify-center gap-4 mt-8">
         <Fade direction="up">
           <button className="px-8 py-3 font-bold border border-[#007bff] text-[#17a2b8] hover:bg-[#0056b3] hover:text-white hover:boreder-[#007bff]">
             Cricket

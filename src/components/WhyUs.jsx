@@ -52,7 +52,8 @@ const WhyUs = () => {
         </div>
 
         {/* Support */}
-        <div className="text-center p-6 bg-[#343a40] rounded-lg shadow-lg">
+        <div className="text-center p-6 bg-[#343a40]
+         rounded-lg shadow-lg">
           <img
             src={supportIcon}
             alt="Support Icon"
